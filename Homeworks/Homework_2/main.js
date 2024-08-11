@@ -149,36 +149,36 @@ let dayTemp = [
 // Скласти розклад на тиждень за домопоги switch. Користувач вводить порядковий номер дня тижня і на екрані
 // відображається інфа що заплановано на цей день (можна замість плану на день, назву дня англійською).
 
-// let schedule = prompt('Enter the day number');
-// switch (schedule) {
-//     case '1':
-//         alert('Monday: work, work, work');
-//         break;
-//
-//     case '2':
-//         alert('Tuesday: work, work, work');
-//         break;
-//
-//     case '3':
-//         alert('Wednesday: work, work, work');
-//         break;
-//
-//     case '4':
-//         alert('Thursday: work, work');
-//         break;
-//
-//     case '5':
-//         alert('Friday: work');
-//         break;
-//
-//     case '6':
-//         alert('Saturday: rest all day');
-//         break;
-//
-//     case '7':
-//         alert('Sunday: ready to work');
-//         break;
-// }
+let schedule = prompt('Enter the day number');
+switch (schedule) {
+    case '1':
+        alert('Monday: work, work, work');
+        break;
+
+    case '2':
+        alert('Tuesday: work, work, work');
+        break;
+
+    case '3':
+        alert('Wednesday: work, work, work');
+        break;
+
+    case '4':
+        alert('Thursday: work, work');
+        break;
+
+    case '5':
+        alert('Friday: work');
+        break;
+
+    case '6':
+        alert('Saturday: rest all day');
+        break;
+
+    case '7':
+        alert('Sunday: ready to work');
+        break;
+}
 
 // Користувач вводить або має два числа.
 // Потрібно знайти та вивести максимальне число з тих двох .
