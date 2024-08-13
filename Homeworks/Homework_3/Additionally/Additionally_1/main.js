@@ -133,3 +133,106 @@ for (let i = 1; i <= 100; i++) {
     }
 }
 
+// Створити масив книжок (назва, кількість сторінок, автори, жанри).
+
+const books = [
+    {
+        title: 'To Kill a Mockingbird',
+        pages: 281,
+        authors: ['Harper Lee'],
+        genres: ['Fiction', 'Classic']
+    },
+    {
+        title: '1984',
+        pages: 328,
+        authors: ['George Orwell'],
+        genres: ['Dystopian', 'Science Fiction', 'Political Fiction']
+    },
+    {
+        title: 'The Great Gatsby',
+        pages: 180,
+        authors: ['F. Scott Fitzgerald'],
+        genres: ['Fiction', 'Tragedy']
+    },
+    {
+        title: 'Good Omens',
+        pages: 412,
+        authors: ['Neil Gaiman', 'Terry Pratchett'],
+        genres: ['Fantasy', 'Comedy', 'Apocalyptic']
+    },
+    {
+        title: 'The Lord of the Rings',
+        pages: 1216,
+        authors: ['J.R.R. Tolkien'],
+        genres: ['Fantasy', 'Adventure', 'Epic']
+    },
+    {
+        title: 'Pride and Prejudice',
+        pages: 279,
+        authors: ['Jane Austen'],
+        genres: ['Romance']
+    }
+];
+
+// - знайти найбльшу книжку
+
+let maxPages = 0;
+let bookWithMaxPages;
+for (let i = 0; i < books.length; i++) {
+    if (books[i].pages > maxPages) {
+        maxPages = books[i].pages;
+        bookWithMaxPages = books[i];
+    }
+}
+console.log(bookWithMaxPages);
+
+// - знайти книжку/ки з найбільшою кількістю жанрів
+
+let maxGenres = 0;
+let bookWithMaxGenres = [];
+for (let i = 0; i < books.length; i++) {
+    let numGenres = books[i].genres.length;
+    if (numGenres > maxGenres) {
+        maxGenres = numGenres;
+        bookWithMaxGenres = [books[i]];
+    } else if (numGenres === maxGenres) {
+        bookWithMaxGenres[bookWithMaxGenres.length] = books[i];
+    }
+}
+console.log(bookWithMaxGenres);
+
+// - знайти книжку/ки з найдовшою назвою
+
+let maxTitle = '';
+let bookWithMaxTitle = [];
+for (let i = 0; i < books.length; i++) {
+    let numTitle = books[i].title.length;
+    if (numTitle > maxTitle) {
+        maxTitle = numTitle;
+        bookWithMaxTitle = [books[i]];
+    } else if (numTitle === maxTitle) {
+        bookWithMaxTitle[bookWithMaxTitle.length] = books[i];
+    }
+}
+console.log(bookWithMaxTitle);
+
+// - знайти книжку/ки які писали 2 автори
+
+let bookWithTwoAuthors;
+for (let i = 0; i < books.length; i++) {
+    if (books[i].authors.length === 2) {
+        bookWithTwoAuthors = books[i];
+    }
+}
+console.log(bookWithTwoAuthors);
+
+// - знайти книжку/ки які писав 1 автор
+
+let bookWithOneAuthor = [];
+for (let i = 0; i < books.length; i++) {
+    if (books[i].authors.length === 1) {
+        bookWithOneAuthor[bookWithOneAuthor.length] = books[i];
+    }
+}
+console.log(bookWithOneAuthor);
+
