@@ -3,7 +3,7 @@
 
 let arr1 = [];
 for (let i = 0; i < 50; i++) {
-    arr1[arr1.length] = i * 2;
+    arr1.push(i * 2);
 }
 console.log(arr1);
 
@@ -11,7 +11,7 @@ console.log(arr1);
 
 let arr2 = [];
 for (let i = 0; i < 50; i++) {
-    arr2[arr2.length] = (i * 2) + 1;
+    arr2.push((i * 2) + 1);
 }
 console.log(arr2);
 
@@ -19,7 +19,7 @@ console.log(arr2);
 
 let arr3 = [];
 for (let i = 0; i < 20; i++) {
-    arr3[arr3.length] = Math.floor(Math.random() * 101);
+    arr3.push(Math.floor(Math.random() * 101));
 }
 console.log(arr3);
 
@@ -27,7 +27,7 @@ console.log(arr3);
 
 let arr4 = [];
 for (let i = 0; i < 20; i++) {
-    arr4[arr4.length] = Math.floor(Math.random() * 732) + 8;
+    arr4.push(Math.floor(Math.random() * 732) + 8);
 }
 console.log(arr4);
 
@@ -50,7 +50,7 @@ for (let i = 2; i < arr3.length; i += 3) {
 let arr5 =[];
 for (let i = 2; i < arr3.length; i += 3) {
     if (arr3[i] % 2 === 0) {
-        arr5[arr5.length] = arr3[i];
+        arr5.push(arr3[i]);
     }
 }
 console.log(arr5);
@@ -79,8 +79,8 @@ console.log(result);
 let arr6 = [];
 let arr7 = [];
 for (let i = 0; i < 40; i++) {
-    arr6[arr6.length] = Math.floor(Math.random() * 200) + 1;
-    arr7[arr7.length] = arr6[i] * 5;
+    arr6.push(Math.floor(Math.random() * 200) + 1);
+    arr7.push(arr6[i] * 5);
 }
 console.log(arr6);
 console.log(arr7);
@@ -92,7 +92,7 @@ let myArray = [42, "hello", true, 3.14, "world", false, 100, "JavaScript", null,
 let numArray = [];
 for (const myArrayElement of myArray) {
     if (typeof myArrayElement === 'number') {
-        numArray[numArray.length] = myArrayElement;
+        numArray.push(myArrayElement);
     }
 }
 console.log(numArray);
@@ -136,7 +136,7 @@ for (const elem of citiesWithId) {
     for (const element of usersWithId) {
         if (element.id === userId) {
             element.address = elem;
-            usersWithCities[usersWithCities.length] = element;
+            usersWithCities.push(element);
         }
     }
 }
@@ -159,7 +159,7 @@ let originalArray = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
 let copiedArray = [];
 
 for (let i = 0; i < originalArray.length; i++) {
-    copiedArray[copiedArray.length] = originalArray[i];
+    copiedArray.push(originalArray[i]);
 }
 
 console.log(originalArray);

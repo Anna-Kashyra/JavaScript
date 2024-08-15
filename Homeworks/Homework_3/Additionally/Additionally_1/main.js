@@ -196,7 +196,7 @@ for (let i = 0; i < books.length; i++) {
         maxGenres = numGenres;
         bookWithMaxGenres = [books[i]];
     } else if (numGenres === maxGenres) {
-        bookWithMaxGenres[bookWithMaxGenres.length] = books[i];
+        bookWithMaxGenres.push(books[i]);
     }
 }
 console.log(bookWithMaxGenres);
@@ -211,7 +211,7 @@ for (let i = 0; i < books.length; i++) {
         maxTitle = numTitle;
         bookWithMaxTitle = [books[i]];
     } else if (numTitle === maxTitle) {
-        bookWithMaxTitle[bookWithMaxTitle.length] = books[i];
+        bookWithMaxTitle.push(books[i]);
     }
 }
 console.log(bookWithMaxTitle);
@@ -231,7 +231,7 @@ console.log(bookWithTwoAuthors);
 let bookWithOneAuthor = [];
 for (let i = 0; i < books.length; i++) {
     if (books[i].authors.length === 1) {
-        bookWithOneAuthor[bookWithOneAuthor.length] = books[i];
+        bookWithOneAuthor.push(books[i]);
     }
 }
 console.log(bookWithOneAuthor);
