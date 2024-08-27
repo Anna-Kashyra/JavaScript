@@ -1,0 +1,26 @@
+.alpha {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.beta {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.heading {
+    font-size: 24px;
+    color: maroon;
+}
+
+.description {
+    font-size: 18px;
+    font-style: italic;
+}
+
+.flex {
+    display: flex;
+    gap: 30px;
+    font-size: 24px;
+}
