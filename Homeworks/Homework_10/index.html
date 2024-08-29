@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        #disappearing-text, #form1, #form2 {
+            margin-bottom: 20px;
+        }
+
+        .number-block, .money-block {
+            width: 200px;
+            height: 200px;
+            background-color: deeppink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 60px;
+        }
+
+        table {
+            margin: 10px;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        table th,
+        table td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .money-block {
+            font-size: 50px;
+            background-color: darkturquoise;
+        }
+
+        #container {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .buttons button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+<!--Task 1-->
+<div id="disappearing-text"></div>
+
+<!--Task 2-->
+<form id="form1" name="form1">
+    <label>Age verification <input type="number" name="age" placeholder="Your age"></label>
+    <button type="submit">Submit</button>
+</form>
+
+<!--Task 3-->
+<form id="form2" name="form2">
+    <label>Enter your name <input type="text" name="name" placeholder="Your name"></label>
+    <label>Enter your surname <input type="text" name="surname" placeholder="Your surname"></label>
+    <label>Enter your age <input type="number" name="age" placeholder="Your age"></label>
+    <button type="submit">Submit</button>
+</form>
+
+<!--Task 4-->
+<div id="number-block" class="number-block">5</div>
+
+<!--Task 6-->
+<h3>Weight Converter: KG to Pounds</h3>
+
+<label for="kgInput">Enter weight in KG:</label>
+<input type="number" id="kgInput" name="kgInput" placeholder="0" step="0.01">
+
+<p id="result">Weight in Pounds: 0</p>
+
+<!--Task 8-->
+<form id="form3" name="form3">
+    <label>Enter the number of rows <input type="number" name="rows"></label>
+    <label>Enter the number of cells <input type="number" name="cells"></label>
+    <label>Enter the contents of the cells <input type="text" name="content"></label>
+    <button type="submit">Submit</button>
+</form>
+
+<table id="table"></table>
+
+<!--Task 10-->
+
+<div id="money-block" class="money-block">100 грн</div>
+
+<!--Task 11-->
+<div id="container"></div>
+<div class="buttons">
+    <button id="prev">Prev</button>
+    <button id="next">Next</button>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
