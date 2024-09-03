@@ -146,10 +146,12 @@ form3.addEventListener('submit', function (event) {
 // При перезавантаженні, яке відбулось раніше ніж минуло 10 секунд - нічого не відбувається
 
 let moneyBlock = document.getElementById('money-block');
-let currentMoney = parseInt(moneyBlock.innerText, 10);
 let lastUpdateTime = localStorage.getItem('lastUpdateTime');
 let currentTime = Date.now();
 
+let currentMoney = localStorage.getItem('money') ?
+    parseInt(localStorage.getItem('money'), 10) :
+    parseInt(moneyBlock.innerText, 10);
 if (!lastUpdateTime || (currentTime - lastUpdateTime) > 10000) {
     currentMoney += 10;
     localStorage.setItem('money', currentMoney);
